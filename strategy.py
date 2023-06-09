@@ -2,8 +2,9 @@ import time
 import datetime as dt
 import matplotlib.pyplot as plt
 import yfinance as yf
-
 plt.style.use("seaborn-v0_8-dark")
+
+# plotting data
 
 sma1 = 30
 sma2 = 100
@@ -17,8 +18,8 @@ data[f'SMA_{sma2}'] = data['Adj Close'].rolling(window=sma2).mean()
 
 
 plt.plot(data['Adj Close'], label = "Share Price", color = 'black')
-plt.plot(data[f'SMA_{sma1}'], label = f"SMA_{sma1}", color = 'blue')
-plt.plot(data[f'SMA_{sma2}'], label = f"SMA_{sma2}", color = 'orange')
+plt.plot(data[f'SMA_{sma1}'], label = f"SMA_{sma1}", color = 'orange')
+plt.plot(data[f'SMA_{sma2}'], label = f"SMA_{sma2}", color = 'blue')
 plt.legend(loc = 'upper left')
 plt.show()
 
