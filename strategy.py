@@ -6,7 +6,7 @@ plt.style.use("seaborn-v0_8-dark")
 
 # plotting data
 
-sma1 = 30
+sma1 = 40
 sma2 = 100
 
 start = dt.datetime.now() - dt.timedelta(days=365*4)
