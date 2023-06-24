@@ -12,7 +12,7 @@ sma2 = 100
 start = dt.datetime.now() - dt.timedelta(days=365*4)
 end = dt.datetime.now()
 
-data = yf.download('GOOG', start=start, end=end)
+data = yf.download('AMD', start=start, end=end)
 data[f'SMA_{sma1}'] = data['Adj Close'].rolling(window=sma1).mean()
 data[f'SMA_{sma2}'] = data['Adj Close'].rolling(window=sma2).mean()
 
